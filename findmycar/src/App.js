@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-// import carCard from './components/carCard.js'
+import CarCard from './components/carCard.js'
 
 function App() {
   const [cars, setCars] = useState([]);
@@ -121,6 +121,8 @@ const handleToggleComplete = (carData)=>{
             </section>
             <section>
     <h2>Cars</h2>
+    <CarCard cars={cars}/>
+    
     <ul>
     {
       cars.map((car) => {
@@ -141,6 +143,7 @@ const handleToggleComplete = (carData)=>{
         
     </ul>
 </section>
+
         </main>
   );
   
