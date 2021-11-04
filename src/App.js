@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import CarCard from './components/carCard.js'
 import Nav from './components/nav.js'
+import Footer from './components/footer.js'
 
 
 function App() {
@@ -104,7 +105,7 @@ const handleNewTodoFormSubmit = (event)=>{
     <CarCard cars={cars}/>
 
 
-
+    <Footer />
 
 
     </main>
