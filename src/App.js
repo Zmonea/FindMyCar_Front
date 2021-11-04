@@ -79,21 +79,26 @@ const handleNewTodoFormSubmit = (event)=>{
   return (
     <main className="flexColumn">
     <Nav />
-            <h1>Car List</h1>
+            <h1 className="textAlignCenter">Car List</h1>
+            <div className="formImgFlex">
             <section>
-                <h2>Setup Car for Sale</h2>
+              <img className="formImg" src="https://images.unsplash.com/photo-1532268116505-8c59cc37d2e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80"></img>
+            </section>
+            <section className="newForm">
+                <h2 >Setup Car for Sale</h2>
 
-                <form onSubmit={handleNewTodoFormSubmit}>
+                <form className="formCenter"onSubmit={handleNewTodoFormSubmit}>
                   Make: <input type="text" onChange={handleNewMake}/><br/>
                   Model: <input type="text" onChange={handleNewModel}/><br/>
                   Year:   <input type="number" onChange={handleNewYear}/><br/>
                   Color:  <input type="text" onChange={handleNewColor}/><br/>
                   Image: <input type="text" onChange={handleNewImage}/><br/>
                   Price: <input type="number" onChange={handleNewPrice}/><br/>
-                    <input type="submit" value="Create new Car"/>
+                    <input id="submitNew" type="submit" value="Create new Car"/>
                 </form>
 
             </section>
+            </div>
 
 
     <CarCard cars={cars}/>

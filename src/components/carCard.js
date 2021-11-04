@@ -85,7 +85,7 @@ const handleDelete = (carData)=>{
   }
      return(
      <section>
-        <h2>Cars</h2>
+        <h2 className="textAlignCenter">Cars</h2>
         <ul className="flexCarCards">
         {
             props.cars.map((car) => {
