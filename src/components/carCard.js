@@ -93,11 +93,13 @@ const handleDelete = (carData)=>{
 
                 return <div className="aniCard" key={car._id}>
                 <img className="carImg" src={car.image}/><br/>
-                Make: {car.make}<br/>
-                Model: {car.model}<br/>
-                Year: {car.year}<br/>
-                Color: {car.color}<br/>
-                Price: ${car.price}<br/>
+                    <div className="cardText">
+                        Make: {car.make}<br/>
+                        Model: {car.model}<br/>
+                        Year: {car.year}<br/>
+                        Color: {car.color}<br/>
+                        Price: ${car.price}<br/>
+                    </div>
                 <section>
                      {showForm ? (<div className="hide"> Not showing</div>
                          ):(
@@ -120,7 +122,7 @@ const handleDelete = (carData)=>{
                             </div>
 
 )}
-                     
+                        <div className="flexWrapperRowButton">
                         {showBuy ? (<form onSubmit={(event) => {
                            //palceholder for Buy Function
                         }}>
@@ -147,6 +149,7 @@ const handleDelete = (carData)=>{
                         }}>
                               <input id="delete" type="submit" value="Delete" />
                         </form>
+                        </div>
 
                   </section>
 
