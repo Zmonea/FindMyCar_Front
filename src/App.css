@@ -15,6 +15,7 @@
 .flexCarCards{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .aniCard{
   max-width: 400px;
@@ -32,14 +33,23 @@
   color: white;
   font-size: 1.2em;
 }
+
 .carImg{
-max-height: 300px;
+max-height: 200px;
 width: 350px;
 }
+
 .flexWrapperRow{
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.flexRowNav{
+  background-color: #282c34;
+  height: 150px;
+  width: 100%;
+
 }
 .hide{
   display: none;
@@ -58,6 +68,9 @@ width: 350px;
 #delete{
   background-color: rgb(235, 22, 2);
   color: white;
+}
+#buy{
+  background-color: limegreen;
 }
 #edit{
   background-color: white;
