@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Quicksand&display=swap');
+
+*{
+   font-family: 'Quicksand';
+}
+
 .App {
   text-align: center;
 }
@@ -15,14 +21,15 @@
 .flexCarCards{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .aniCard{
   max-width: 400px;
   text-align: center;
-  
+
   border: 2px solid black;
-  
-  
+
+
   position: relative;
   background-color: rgba(14, 14, 14, 0.644);
   border-radius: 5px;
@@ -32,14 +39,23 @@
   color: white;
   font-size: 1.2em;
 }
+
 .carImg{
-max-height: 300px;
+max-height: 200px;
 width: 350px;
 }
+
 .flexWrapperRow{
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.flexRowNav{
+  background-color: #282c34;
+  height: 150px;
+  width: 100%;
+
 }
 .hide{
   display: none;
@@ -53,18 +69,21 @@ width: 350px;
   right: 0;
   bottom: 0;
   width: 100%;
-  
+
 }
 #delete{
   background-color: rgb(235, 22, 2);
   color: white;
 }
+#buy{
+  background-color: limegreen;
+}
 #edit{
   background-color: white;
   color: black;
   border: 1px solid black;
- 
-  
+
+
 }
 #editBack{
   z-index: 10;
@@ -86,3 +105,22 @@ width: 350px;
   color: white;
 }
 
+/* ========== Footer ========== */
+footer{
+   text-align: center;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   background-color: #282c34;
+   height: 80px;
+}
+
+p{
+   color: white;
+   margin-bottom: 3px;
+}
+
+.icons{
+   width: 35px;
+}

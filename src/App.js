@@ -4,6 +4,8 @@ import './App.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import CarCard from './components/carCard.js'
+import Nav from './components/nav.js'
+import Footer from './components/footer.js'
 
 
 function App() {
@@ -77,6 +79,7 @@ const handleNewTodoFormSubmit = (event)=>{
 
   return (
     <main className="flexColumn">
+    <Nav />
             <h1>Car List</h1>
             <section>
                 <h2>Setup Car for Sale</h2>
@@ -97,7 +100,7 @@ const handleNewTodoFormSubmit = (event)=>{
     <CarCard cars={cars}/>
 
 
-
+    <Footer />
 
 
     </main>
