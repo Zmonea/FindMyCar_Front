@@ -11,7 +11,7 @@ import axios from 'axios';
 
     const [cars, setCars] = useState([]);
   const [newMake, setNewMake] = useState('');
-  const [newModel, setNewModel] = useState(false);
+  const [newModel, setNewModel] = useState('');
   const [newImage, setNewImage] = useState('');
   const [newColor, setNewColor] = useState('');
   const [newPrice, setNewPrice] = useState(0);
@@ -63,8 +63,8 @@ const handleDelete = (carData)=>{
                 <img class="carImg" src={car.image}/><br/>
                 Make: {car.make}<br/>
                 Model: {car.model}<br/>
-                Year: {car.make}<br/>
-                Color: {car.model}<br/>
+                Year: {car.year}<br/>
+                Color: {car.color}<br/>
               
                 Price: ${car.price}<br/>
                 <div class="flexWrapperRow">

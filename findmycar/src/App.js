@@ -10,7 +10,7 @@ function App() {
 
   const [cars, setCars] = useState([]);
   const [newMake, setNewMake] = useState('');
-  const [newModel, setNewModel] = useState(false);
+  const [newModel, setNewModel] = useState('');
   const [newImage, setNewImage] = useState('');
   const [newColor, setNewColor] = useState('');
   const [newPrice, setNewPrice] = useState(0);
