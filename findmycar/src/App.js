@@ -25,7 +25,7 @@ function App() {
 },[])
 
 const handleNewMake = (event)=>{
-   
+
   setNewMake(event.target.value);
 }
 const handleNewModel = (event) => {
@@ -49,7 +49,7 @@ const handleNewPrice = (event)=>{
 
 
 const handleNewTodoFormSubmit = (event)=>{
-  event.preventDefault();
+
 
   axios.post(
       'http://localhost:3000/cars',
@@ -80,7 +80,7 @@ const handleNewTodoFormSubmit = (event)=>{
             <h1>Car List</h1>
             <section>
                 <h2>Setup Car for Sale</h2>
-               
+
                 <form onSubmit={handleNewTodoFormSubmit}>
                   Make: <input type="text" onChange={handleNewMake}/><br/>
                   Model: <input type="text" onChange={handleNewModel}/><br/>
@@ -90,19 +90,19 @@ const handleNewTodoFormSubmit = (event)=>{
                   Price: <input type="number" onChange={handleNewPrice}/><br/>
                     <input type="submit" value="Create new Car"/>
                 </form>
-                
-            </section>
-            
-    
-    <CarCard cars={cars}/>
-    
 
-    
+            </section>
+
+
+    <CarCard cars={cars}/>
+
+
+
 
 
     </main>
   );
-  
+
 }
 
 export default App;
