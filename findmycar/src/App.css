@@ -12,6 +12,41 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.aniCard{
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  border: 2px solid black;
+  flex-direction: column;
+  flex-basis: 30%;
+  align-items: center;
+  background-color: rgba(14, 14, 14, 0.644);
+  border-radius: 5px;
+  height: 540px;
+  margin-top: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.418);
+  color: white;
+  font-size: 1.2em;
+}
+.carImg{
+max-height: 300px;
+width: 350px;
+}
+.flexWrapperRow{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#delete{
+  background-color: rgb(235, 22, 2);
+  color: white;
+}
+#edit{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -24,15 +59,3 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

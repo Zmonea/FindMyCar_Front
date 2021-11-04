@@ -1,10 +1,13 @@
 import React from 'react';
+import './views/skeleton.css'
 import './App.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import CarCard from './components/carCard.js'
 
+
 function App() {
+
   const [cars, setCars] = useState([]);
   const [newMake, setNewMake] = useState('');
   const [newModel, setNewModel] = useState(false);
@@ -67,39 +70,9 @@ const handleNewTodoFormSubmit = (event)=>{
       })
 }
 
-const handleDelete = (carData)=>{
-  axios
-      .delete(`http://localhost:3000/cars/${carData._id}`)
-      .then(()=>{
-          axios
-              .get('http://localhost:3000/cars')
-              .then((response)=>{
-                setCars(response.data)
-              })
-      })
-}
 
-const handleToggleComplete = (carData)=>{
-  axios
-      .put(
-          `http://localhost:3000/animals/${carData._id}`,
-          {
-            make:newMake,
-            model: newModel,
-            year: newYear,
-            color: newColor,
-            image: newImage,
-            price: newPrice,
-          }
-      )
-      .then(()=>{
-          axios
-              .get('http://localhost:3000/animals')
-              .then((response)=>{
-                  setCars(response.data)
-              })
-      })
-}
+
+
 
 
   return (
@@ -119,32 +92,15 @@ const handleToggleComplete = (carData)=>{
                 </form>
                 
             </section>
-            <section>
-    <h2>Cars</h2>
+            
+    
     <CarCard cars={cars}/>
     
-    <ul>
-    {
-      cars.map((car) => {
 
-            return <div class="aniCard" key={car._id}>
-            Make: {car.make}<br/>
-            Model: {car.model}<br/>
-            Year: {car.make}<br/>
-            Color: {car.model}<br/>
-            <img src={car.image}/><br/>
-            Price: ${car.price}<br/>
-            {/* Reserved: {car.reservedForAdoption?'Reserved': 'Able to Reserve'}<br/> */}
-             <button onClick={ ()=>{ handleToggleComplete(car) } }>edit</button>
-            <button onClick={ ()=> { handleDelete(car) } }>Delete</button>
-            </div>
-        })
-    }
-        
-    </ul>
-</section>
+    
 
-        </main>
+
+    </main>
   );
   
 }

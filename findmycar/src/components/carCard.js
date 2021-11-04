@@ -1,7 +1,57 @@
-import React from 'react';
- 
- const carCard = (props) => {
+
+import React, {useState} from 'react';
+import axios from 'axios';
+
+
+
+
+
+ const CarCard = (props) => {
     
+
+    const [cars, setCars] = useState([]);
+  const [newMake, setNewMake] = useState('');
+  const [newModel, setNewModel] = useState(false);
+  const [newImage, setNewImage] = useState('');
+  const [newColor, setNewColor] = useState('');
+  const [newPrice, setNewPrice] = useState(0);
+  const [newYear, setNewYear] = useState(0);
+
+const handleDelete = (carData)=>{
+    
+
+    axios
+        .delete(`http://localhost:3000/cars/${carData._id}`)
+        .then(()=>{
+            axios
+                .get('http://localhost:3000/cars')
+                .then((response)=>{
+                  setCars(response.data)
+                })
+        })
+  }
+
+  const handleToggleComplete = (carData)=>{
+    axios
+        .put(
+            `http://localhost:3000/cars/${carData._id}`,
+            {
+              make:newMake,
+              model: newModel,
+              year: newYear,
+              color: newColor,
+              image: newImage,
+              price: newPrice,
+            }
+        )
+        .then(()=>{
+            axios
+                .get('http://localhost:3000/cars')
+                .then((response)=>{
+                    setCars(response.data)
+                })
+        })
+  }
      return(
      <section>
         <h2>Cars</h2>
@@ -10,15 +60,18 @@ import React from 'react';
             props.cars.map((car) => {
     
                 return <div class="aniCard" key={car._id}>
+                <img class="carImg" src={car.image}/><br/>
                 Make: {car.make}<br/>
                 Model: {car.model}<br/>
                 Year: {car.make}<br/>
                 Color: {car.model}<br/>
-                <img src={car.image}/><br/>
+              
                 Price: ${car.price}<br/>
-                {/* Reserved: {car.reservedForAdoption?'Reserved': 'Able to Reserve'}<br/> */}
-                 {/* <button onClick={ ()=>{ handleToggleComplete(car) } }>edit</button>
-                <button onClick={ ()=> { handleDelete(car) } }>Delete</button> */}
+                <div class="flexWrapperRow">
+                <button id="edit" onClick={ ()=>{ handleToggleComplete(car) } }>edit</button>
+                <button id="delete" onClick={ ()=> { handleDelete(car) } }>Delete</button>
+                </div>
+                 
                 </div>
             })
         }
@@ -32,4 +85,4 @@ import React from 'react';
 
 
 
-export default carCard;
+export default CarCard;
