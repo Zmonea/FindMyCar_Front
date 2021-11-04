@@ -85,8 +85,13 @@ const handleDelete = (carData)=>{
         <ul>
         {
             props.cars.map((car) => {
+<<<<<<< HEAD
+                console.log(car._id)
+                return (<div key={car._id} class="aniCard" >
+=======
 
                 return <div class="aniCard" key={car._id}>
+>>>>>>> 6f157ea915b0f267ec9360b2c1e37708bbb9028e
                 <img class="carImg" src={car.image}/><br/>
                 Make: {car.make}<br/>
                 Model: {car.model}<br/>
@@ -115,6 +120,7 @@ const handleDelete = (carData)=>{
                   </section>
 
                 </div>
+                )
             })
         }
 
