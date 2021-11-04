@@ -2,15 +2,25 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.horiNav{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  align-items: flex-end;
 }
+.navLink{
+  text-decoration: none;
+  color:white;
+  font-size: 1.4em;;
+}
+.flexRowNav{
+  background-color: #282c34;
+  height: 150px;
+  width: 100%;
+  
+  
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 .flexCarCards{
   display: flex;
@@ -45,12 +55,7 @@ width: 350px;
   justify-content: space-between;
 }
 
-.flexRowNav{
-  background-color: #282c34;
-  height: 150px;
-  width: 100%;
 
-}
 .hide{
   display: none;
 }

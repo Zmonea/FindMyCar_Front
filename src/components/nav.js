@@ -7,7 +7,14 @@ const NavBar = (props) => {
 
     return(
         <nav> 
-            <div class="flexRowNav">
+            <div className="flexRowNav">
+                <ul className="horiNav">
+                    <li><a className="navLink" href="#">Used Cars</a></li>
+                    <li><a className="navLink" href="#">New Cars</a></li>
+                    <li><a className="navLink" href="#">Cash Offers</a></li>
+                    <li><a className="navLink" href="#">Find Local Dealers</a></li>
+
+                </ul>
 
             </div>
         </nav>
