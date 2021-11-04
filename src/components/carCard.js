@@ -3,12 +3,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 
-
-
-
  const CarCard = (props) => {
-
-
     const [cars, setCars] = useState([]);
   const [newMake, setNewMake] = useState('');
   const [newModel, setNewModel] = useState('');
