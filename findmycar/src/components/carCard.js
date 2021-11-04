@@ -3,21 +3,16 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 
-
-
-
  const CarCard = (props) => {
-
-
     const [cars, setCars] = useState([]);
-  const [newMake, setNewMake] = useState('');
-  const [newModel, setNewModel] = useState('');
-  const [newImage, setNewImage] = useState('');
-  const [newColor, setNewColor] = useState('');
-  const [newPrice, setNewPrice] = useState(0);
-  const [newYear, setNewYear] = useState(0);
+    const [newMake, setNewMake] = useState('');
+    const [newModel, setNewModel] = useState('');
+    const [newImage, setNewImage] = useState('');
+    const [newColor, setNewColor] = useState('');
+    const [newPrice, setNewPrice] = useState(0);
+    const [newYear, setNewYear] = useState(0);
 
-  const handleNewMakeChange = (event) => {
+    const handleNewMakeChange = (event) => {
       setNewMake(event.target.value)
    }
 
