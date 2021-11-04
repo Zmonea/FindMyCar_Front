@@ -17,6 +17,8 @@ import axios from 'axios';
   const [newPrice, setNewPrice] = useState(0);
   const [newYear, setNewYear] = useState(0);
 
+
+  
 const handleDelete = (carData)=>{
     
 
@@ -58,8 +60,8 @@ const handleDelete = (carData)=>{
         <ul>
         {
             props.cars.map((car) => {
-    
-                return <div class="aniCard" key={car._id}>
+                console.log(car._id)
+                return (<div key={car._id} class="aniCard" >
                 <img class="carImg" src={car.image}/><br/>
                 Make: {car.make}<br/>
                 Model: {car.model}<br/>
@@ -73,6 +75,7 @@ const handleDelete = (carData)=>{
                 </div>
                  
                 </div>
+                )
             })
         }
             
