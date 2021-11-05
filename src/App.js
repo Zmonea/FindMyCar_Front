@@ -3,10 +3,9 @@ import './views/skeleton.css'
 import './App.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import CarCard from './components/carCard.js'
+import CarList from './components/carList.js'
 import Nav from './components/nav.js'
 import Footer from './components/footer.js'
-
 
 function App() {
 
@@ -71,12 +70,6 @@ const handleNewTodoFormSubmit = (event)=>{
           })
       })
 }
-
-
-
-
-
-
   return (
     <main className="flexColumn">
     <Nav />
@@ -102,7 +95,7 @@ const handleNewTodoFormSubmit = (event)=>{
             </div>
 
 
-    <CarCard cars={cars}/>
+    <CarList />
 
 
     <Footer />

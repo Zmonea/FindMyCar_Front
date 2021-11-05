@@ -15,46 +15,50 @@
   height: 75px;
   align-items: flex-end;
 }
+
 .navLink{
   text-decoration: none;
   color:white;
   font-size: 1.4em;;
 }
+
 .flexRowNav{
   background-color: #282c34;
   height: 75px;
   width: 100%;
-
-
 
 }
 .formImg{
   max-width: 685px;
   max-height: 500px;
 }
+
 .formImgFlex{
   display: flex;
   justify-content: center;
 }
+
 .newForm{
   background-color: rgb(5, 5, 8);
   color:white;
   line-height: normal;
   height: 460px;
   padding-right:20px;
-
 }
+
 .formCenter{
   text-align: center;
 }
 
 #submitNew{
-  background-color: bisque;
-  }
-#submitNew:hover{
-background-color: rgb(5, 5, 8);
-color:white;
+  background-color: snow;
 }
+
+#submitNew:hover{
+   background-color: rgb(5, 5, 8);
+   color:white;
+}
+
 .flexCarCards{
   display: flex;
   justify-content: space-around;
@@ -64,10 +68,7 @@ color:white;
 .aniCard{
   max-width: 400px;
   text-align: center;
-
   border: 2px solid black;
-
-
   position: relative;
   background-color:  #282c34;
   border-radius: 5px;
@@ -77,13 +78,14 @@ color:white;
   color: white;
   font-size: 1.2em;
 }
+
 .cardText{
   margin-top: 5px;
 }
 
 .carImg{
-max-height: 200px;
-width: 350px;
+   max-height: 200px;
+   width: 350px;
 }
 
 .flexWrapperRow{
@@ -103,6 +105,7 @@ width: 350px;
 .hide{
   display: none;
 }
+
 .editCardOverlay{
   background-color: rgba(0, 0, 0, 0.698);
   position: absolute;
@@ -112,30 +115,46 @@ width: 350px;
   right: 0;
   bottom: 0;
   width: 100%;
-
 }
+
+
+/* ==========Car Card Buttons========== */
 #delete{
-  background-color: rgb(235, 22, 2);
-  color: white;
-}
-#buy{
-  background-color: limegreen;
-  margin-bottom: 0;
-}
-#edit{
-  background-color: white;
-  color: black;
+  background-color: snow;
   border: 1px solid black;
-
-
 }
+
+#delete:hover {
+   background-color: DarkRed;
+   color: snow;
+}
+
+#buy{
+  background-color: snow;
+  border: 1px solid black;
+}
+
+#buy:hover {
+   background-color: DarkGreen;
+   color: snow;
+}
+
+#edit{
+  background-color: snow;
+  border: 1px solid black;
+}
+
+#edit:hover {
+   background-color: Navy;
+   color: snow;
+}
+
 #editBack{
   z-index: 10;
   background-color: white;
-  color: black;
   border: 1px solid black;
-  margin-top: 40px;
 }
+
 .textAlignCenter{
   text-align: center;
 }
