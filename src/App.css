@@ -190,3 +190,35 @@ p{
 .icons{
    width: 35px;
 }
+
+
+
+@media  (max-width: 1092px) {
+  .newForm{
+    position: absolute;
+    z-index: 5;
+  top: 156px;
+  left: 260px;
+  right: 0;
+  bottom: 0;
+    width:80%;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+  } 
+
+}
+
+
+@media  (max-width: 692px) {
+  .newForm{
+    position: absolute;
+    z-index: 5;
+  top: 156px;
+  left: 192px;
+  right: 0;
+  bottom: 0;
+    width:80%;
+    background-color: rgba(0, 0, 0, 0);
+  } 
+
+}
