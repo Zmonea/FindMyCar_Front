@@ -71,11 +71,14 @@ color:white;
   position: relative;
   background-color:  #282c34;
   border-radius: 5px;
-  height: 540px;
+  height: 500px;
   margin-top: 5px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.418);
   color: white;
   font-size: 1.2em;
+}
+.cardText{
+  margin-top: 5px;
 }
 
 .carImg{
@@ -87,6 +90,13 @@ width: 350px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.flexWrapperRowButton{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 55px;
 }
 
 
@@ -110,6 +120,7 @@ width: 350px;
 }
 #buy{
   background-color: limegreen;
+  margin-bottom: 0;
 }
 #edit{
   background-color: white;
