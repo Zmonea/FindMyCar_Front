@@ -125,7 +125,7 @@
 }
 
 #delete:hover {
-   background-color: DarkRed;
+   background-color: Red;
    color: snow;
 }
 
@@ -135,7 +135,7 @@
 }
 
 #buy:hover {
-   background-color: DarkGreen;
+   background-color: LimeGreen;
    color: snow;
 }
 
@@ -145,7 +145,7 @@
 }
 
 #edit:hover {
-   background-color: Navy;
+   background-color: DodgerBlue;
    color: snow;
 }
 
