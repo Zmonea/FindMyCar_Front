@@ -50,7 +50,7 @@ const CarList = () => {
     }
     return (
         <section>
-            <h2 className="textAlignCenter">Cars</h2>
+            <h2 className="textAlignCenter">Cars List</h2>
             <ul className="flexCarCards">
                 {
                     cars.map((car) => {
