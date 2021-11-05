@@ -73,7 +73,7 @@ const handleNewTodoFormSubmit = (event)=>{
   return (
     <main className="flexColumn">
     <Nav />
-            <h1 className="textAlignCenter">Car List</h1>
+            <h1 className="textAlignCenter">Find My Car</h1>
             <div className="formImgFlex">
             <section>
               <img className="formImg" src="https://images.unsplash.com/photo-1532268116505-8c59cc37d2e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80"></img>
