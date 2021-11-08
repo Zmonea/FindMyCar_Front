@@ -54,7 +54,7 @@ const handleNewPrice = (event)=>{
 }
 
 const handleCreateUser = (userObj) => {
-    axios.post('https://findmycar-backend.herokuapp.com/cars/createaccount', userObj).then((response) => {
+    axios.post('https://findmycar-backend.herokuapp.com/createaccount', userObj).then((response) => {
       if(response.data.username){
         console.log(response);
         setToggleError(false)
@@ -70,7 +70,7 @@ const handleCreateUser = (userObj) => {
 
   const handleLogin = (userObj) => {
       console.log(userObj);
-    axios.put('https://findmycar-backend.herokuapp.com/cars/login', userObj).then((response) => {
+    axios.put('https://findmycar-backend.herokuapp.com/login', userObj).then((response) => {
       if(response.data.username){
         console.log(response);
         setToggleError(false)
@@ -131,7 +131,7 @@ const handleNewTodoFormSubmit = (event)=>{
 
 
   return (
-    <main className="flexColumn">
+    <main>
     <Nav />
 
     <div className="App">
@@ -157,26 +157,28 @@ const handleNewTodoFormSubmit = (event)=>{
        }
          </div>
 
+   <section className="flexColumn">
+   <h1 className="textAlignCenter">Find My Car</h1>
+     <div className="formImgFlex">
+        <section>
+            <img className="formImg" src="https://images.unsplash.com/photo-1532268116505-8c59cc37d2e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80"></img>
+        </section>
+        <section className="newForm">
+            <h2 >Setup Car for Sale</h2>
+              <form className="formCenter"onSubmit={handleNewTodoFormSubmit}>
+                 Make: <input type="text" onChange={handleNewMake}/><br/>
+                 Model: <input type="text" onChange={handleNewModel}/><br/>
+                 Year:   <input type="number" onChange={handleNewYear}/><br/>
+                 Color:  <input type="text" onChange={handleNewColor}/><br/>
+                 Image: <input type="text" onChange={handleNewImage}/><br/>
+                 Price: <input type="number" onChange={handleNewPrice}/><br/>
+                 <input id="submitNew" type="submit" value="Create new Car"/>
+              </form>
 
-    <h1 className="textAlignCenter">Find My Car</h1>
-      <div className="formImgFlex">
-         <section>
-             <img className="formImg" src="https://images.unsplash.com/photo-1532268116505-8c59cc37d2e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80"></img>
-         </section>
-         <section className="newForm">
-             <h2 >Setup Car for Sale</h2>
-               <form className="formCenter"onSubmit={handleNewTodoFormSubmit}>
-                  Make: <input type="text" onChange={handleNewMake}/><br/>
-                  Model: <input type="text" onChange={handleNewModel}/><br/>
-                  Year:   <input type="number" onChange={handleNewYear}/><br/>
-                  Color:  <input type="text" onChange={handleNewColor}/><br/>
-                  Image: <input type="text" onChange={handleNewImage}/><br/>
-                  Price: <input type="number" onChange={handleNewPrice}/><br/>
-                  <input id="submitNew" type="submit" value="Create new Car"/>
-               </form>
+        </section>
+     </div>
+   </section>
 
-         </section>
-      </div>
 
 
    <CarList />

@@ -199,7 +199,7 @@ text-align: center;
   .newForm{
     position: absolute;
     z-index: 5;
-  top: 156px;
+  top: 360px;
   left: 260px;
   right: 0;
   bottom: 0;
@@ -211,11 +211,11 @@ text-align: center;
 }
 
 
-@media  (max-width: 692px) {
+@media  (max-width: 752px) {
   .newForm{
     position: absolute;
     z-index: 5;
-  top: 156px;
+  top: 360px;
   left: 192px;
   right: 0;
   bottom: 0;
