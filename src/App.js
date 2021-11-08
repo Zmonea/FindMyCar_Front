@@ -27,7 +27,7 @@ function App() {
 
   useEffect(()=>{
     axios
-        .get('https://findmycar-backend.herokuapp.com/')
+        .get('https://findmycar-backend.herokuapp.com/cars')
         .then((response)=>{
           setCars(response.data);
         })
@@ -54,7 +54,7 @@ const handleNewPrice = (event)=>{
 }
 
 const handleCreateUser = (userObj) => {
-    axios.post('https://findmycar-backend.herokuapp.com/createaccount', userObj).then((response) => {
+    axios.post('https://findmycar-backend.herokuapp.com/cars/createaccount', userObj).then((response) => {
       if(response.data.username){
         console.log(response);
         setToggleError(false)
@@ -70,7 +70,7 @@ const handleCreateUser = (userObj) => {
 
   const handleLogin = (userObj) => {
       console.log(userObj);
-    axios.put('https://findmycar-backend.herokuapp.com/login', userObj).then((response) => {
+    axios.put('https://findmycar-backend.herokuapp.com/cars/login', userObj).then((response) => {
       if(response.data.username){
         console.log(response);
         setToggleError(false)
@@ -111,7 +111,7 @@ const handleCreateUser = (userObj) => {
 
 const handleNewTodoFormSubmit = (event)=>{
   axios.post(
-      'https://findmycar-backend.herokuapp.com/',
+      'https://findmycar-backend.herokuapp.com/cars',
       {
           make:newMake,
           model: newModel,
@@ -122,7 +122,7 @@ const handleNewTodoFormSubmit = (event)=>{
       }
   ).then(()=>{
       axios
-          .get('https://findmycar-backend.herokuapp.com/')
+          .get('https://findmycar-backend.herokuapp.com/cars')
           .then((response)=>{
               setCars(response.data)
           })
