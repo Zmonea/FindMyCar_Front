@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CarCard from './carCard';
+import SearchBar from './searchBar';
 
 
 const CarList = () => {
@@ -49,7 +50,12 @@ const CarList = () => {
             })
     }
     return (
+        
+           
+    
+        
         <section>
+         <SearchBar cars={cars}/>
             <h2 className="textAlignCenter">Cars List</h2>
             <ul className="flexCarCards">
                 {
