@@ -191,7 +191,9 @@ p{
    width: 35px;
 }
 
-
+#header-searchForm{
+text-align: center;
+}
 
 @media  (max-width: 1092px) {
   .newForm{

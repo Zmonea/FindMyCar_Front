@@ -18,7 +18,7 @@ const SearchBar = () => {
 
     
     return (
-        <form action="/" method="get">
+        <form action="/" method="get" id="header-searchForm">
         <label htmlFor="header-search">
             <span className="visually-hidden">Search Cars</span>
         </label>
