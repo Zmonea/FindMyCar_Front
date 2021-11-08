@@ -27,7 +27,7 @@ function App() {
 
   useEffect(()=>{
     axios
-        .get('http://localhost:3000/cars')
+        .get('https://findmycar-backend.herokuapp.com/')
         .then((response)=>{
           setCars(response.data);
         })
