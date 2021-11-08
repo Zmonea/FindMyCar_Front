@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CarCard from './carCard';
+import SearchBar from './searchBar';
 
 
 const CarList = () => {
@@ -9,7 +10,7 @@ const CarList = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:3000/cars')
+            .get('https://findmycar-backend.herokuapp.com/')
             .then((response) => {
                 setCars(response.data)
             })
@@ -17,10 +18,10 @@ const CarList = () => {
 
     const handleDelete = (carData) => {
         axios
-            .delete(`http://localhost:3000/cars/${carData._id}`)
+            .delete(`https://findmycar-backend.herokuapp.com/${carData._id}`)
             .then(() => {
                 axios
-                    .get('http://localhost:3000/cars')
+                    .get('https://findmycar-backend.herokuapp.com/')
                     .then((response) => {
                         setCars(response.data)
                     })
@@ -30,7 +31,7 @@ const CarList = () => {
     const editCar = (carData) => {
         axios
             .put(
-                `http://localhost:3000/cars/${carData._id}`,
+                `https://findmycar-backend.herokuapp.com/${carData._id}`,
                 {
                     make: carData.make,
                     model: carData.model,
@@ -42,14 +43,19 @@ const CarList = () => {
             )
             .then(() => {
                 axios
-                    .get('http://localhost:3000/cars')
+                    .get('https://findmycar-backend.herokuapp.com/')
                     .then((response) => {
                         setCars(response.data)
                     })
             })
     }
     return (
+
+
+
+
         <section>
+         <SearchBar cars={cars}/>
             <h2 className="textAlignCenter">Cars List</h2>
             <ul className="flexCarCards">
                 {
