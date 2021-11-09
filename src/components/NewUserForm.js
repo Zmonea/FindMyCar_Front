@@ -26,7 +26,7 @@ const NewUserForm = (props) => {
           :
           null
         }
-        <input type='submit' value='Register'/>
+        <input type='submit' value='Register' className='button'/>
       </form>
     </div>
   );

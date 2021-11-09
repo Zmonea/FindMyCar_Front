@@ -144,7 +144,7 @@ const handleNewTodoFormSubmit = (event)=>{
              :
              <NewUserForm handleCreateUser={handleCreateUser} toggleError={toggleError} errorMessage={errorMessage}/>
              }
-             <button onClick={handleToggleForm} class='accountBtn'>{toggleLogin ? 'Create an account?' : 'Already have an account?'}</button>
+             <button onClick={handleToggleForm} className='button'>{toggleLogin ? 'Create an account?' : 'Already have an account?'}</button>
             </div>
          }
       </div>

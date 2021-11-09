@@ -56,8 +56,7 @@
 }
 
 #submitNew:hover{
-   background-color: rgb(5, 5, 8);
-   color:white;
+   background-color: Gainsboro;
 }
 
 .flexCarCards{
@@ -118,6 +117,10 @@
   width: 100%;
 }
 
+/* ==========Login Buttons========== */
+.button:hover {
+   background-color: Gainsboro;
+}
 
 /* ==========Car Card Buttons========== */
 #delete{
@@ -207,7 +210,7 @@ text-align: center;
     width:80%;
     background-color: rgba(0, 0, 0, 0);
     text-align: center;
-  } 
+  }
 
 }
 
@@ -222,6 +225,6 @@ text-align: center;
   bottom: 0;
     width:80%;
     background-color: rgba(0, 0, 0, 0);
-  } 
+  }
 
 }
