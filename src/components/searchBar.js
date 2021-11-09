@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const SearchBar = () => {
     const [term, setTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         axios
@@ -26,7 +27,9 @@ const SearchBar = () => {
             type="text"
             id="header-search"
             placeholder="Search Cars"
+            onInput={e => setSearchTerm(e.target.value)}
             name="s" 
+            value={searchTerm}
         />
         <button type="submit">Search</button>
     </form>

@@ -6,6 +6,7 @@
 
 .App {
   text-align: center;
+  height: 330px;
 }
 
 .horiNav{
@@ -199,7 +200,7 @@ text-align: center;
   .newForm{
     position: absolute;
     z-index: 5;
-  top: 360px;
+  top: 510px;
   left: 260px;
   right: 0;
   bottom: 0;
@@ -215,7 +216,7 @@ text-align: center;
   .newForm{
     position: absolute;
     z-index: 5;
-  top: 360px;
+  top: 510px;
   left: 192px;
   right: 0;
   bottom: 0;
