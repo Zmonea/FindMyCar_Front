@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/FindMyCar_Front/static/css/main.a7166798.chunk.css",
-    "main.js": "/FindMyCar_Front/static/js/main.8be375b1.chunk.js",
-    "main.js.map": "/FindMyCar_Front/static/js/main.8be375b1.chunk.js.map",
+    "main.js": "/FindMyCar_Front/static/js/main.4076d007.chunk.js",
+    "main.js.map": "/FindMyCar_Front/static/js/main.4076d007.chunk.js.map",
     "runtime-main.js": "/FindMyCar_Front/static/js/runtime-main.71a1a5a5.js",
     "runtime-main.js.map": "/FindMyCar_Front/static/js/runtime-main.71a1a5a5.js.map",
     "static/js/2.455af4fc.chunk.js": "/FindMyCar_Front/static/js/2.455af4fc.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.71a1a5a5.js",
     "static/js/2.455af4fc.chunk.js",
     "static/css/main.a7166798.chunk.css",
-    "static/js/main.8be375b1.chunk.js"
+    "static/js/main.4076d007.chunk.js"
   ]
 }
