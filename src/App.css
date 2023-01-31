@@ -8,7 +8,9 @@
   text-align: center;
   height: 330px;
 }
-
+div#root {
+  background-color: #e7e7e7;
+}
 .horiNav{
   list-style-type: none;
   display: flex;

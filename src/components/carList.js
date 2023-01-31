@@ -10,7 +10,7 @@ const CarList = () => {
 
     useEffect(() => {
         axios
-            .get('https://findmycar-backend.herokuapp.com/cars')
+            .get('https://findmycar-back.onrender.com/cars')
             .then((response) => {
                 setCars(response.data)
             })
@@ -18,10 +18,10 @@ const CarList = () => {
 
     const handleDelete = (carData) => {
         axios
-            .delete(`https://findmycar-backend.herokuapp.com/cars/${carData._id}`)
+            .delete(`https://findmycar-back.onrender.com/cars/${carData._id}`)
             .then(() => {
                 axios
-                    .get('https://findmycar-backend.herokuapp.com/cars')
+                    .get('https://findmycar-back.onrender.com/cars')
                     .then((response) => {
                         setCars(response.data)
                     })
@@ -31,7 +31,7 @@ const CarList = () => {
     const editCar = (carData) => {
         axios
             .put(
-                `https://findmycar-backend.herokuapp.com/cars/${carData._id}`,
+                `https://findmycar-back.onrender.com/cars/${carData._id}`,
                 {
                     make: carData.make,
                     model: carData.model,
@@ -43,7 +43,7 @@ const CarList = () => {
             )
             .then(() => {
                 axios
-                    .get('https://findmycar-backend.herokuapp.com/cars')
+                    .get('https://findmycar-back.onrender.com/cars')
                     .then((response) => {
                         setCars(response.data)
                     })
