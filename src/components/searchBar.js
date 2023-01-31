@@ -9,7 +9,7 @@ const SearchBar = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:3000/cars')
+            .get('https://findmycar-back.onrender.com/cars')
             .then((response) => {
                 setTerm(response.data)
             })
